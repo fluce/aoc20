@@ -59,8 +59,8 @@ namespace _13
 
             CancellationTokenSource cancellationTokenSource=new CancellationTokenSource();
             
-            int n=8;
-            var tasks=Enumerable.Range(0,8).Select(z=>
+            int n=64;
+            var tasks=Enumerable.Range(0,n).Select(z=>
                             Task.Factory.StartNew(()=>Calc( max.x - max.idx+z*max.x, n*max.x, del,cancellationTokenSource))).ToArray();
 
 
